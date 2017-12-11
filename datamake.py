@@ -10,12 +10,23 @@ from chainer.datasets import tuple_dataset
 import random, math
 
 R = 0.5
+D = 9
 
 PERIOD = 120
 AFTER = 0
 INTERVAL = 10
 
 class DataMake:
+	
+	def info(self):
+		return {
+			'range': R,
+			'period': PERIOD,
+			'after': AFTER,
+			'interval': INTERVAL,
+			'train': D * 100000,
+			'test': 38820,
+		}
 
 	def dif(self, array):
 		dif = []
@@ -31,7 +42,7 @@ class DataMake:
 		train = []
 		test = []	
 		
-		for i in range(9):
+		for i in range(D):
 			f = open('history/train{0}.txt'.format(i + 1), 'r')
 			for line in f:
 				train.append(eval(line))
@@ -77,9 +88,9 @@ class DataMake:
 		
 
 class AverageDataMake(DataMake):
-	def evaluate(values):
+	def evaluate(self, values):
 		t = 0
-		if sum(values[1]) / len(values[1]) > values[0]:
+		if sum(values[1:]) / len(values[1:]) > values[0]:
 			t = 1
 		
 		return t
@@ -113,7 +124,7 @@ class CoefDataMake(DataMake):
 	
 		return self.coefficient(points)
 
-	def evaluate(values)
+	def evaluate(self, values):
 			coef = self.array_coefficient(values)
 
 			t = 0

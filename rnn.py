@@ -15,6 +15,16 @@ D1 = 0.0
 D2 = 0.0
 
 class RNN(chainer.Chain):
+
+	def info(self):
+		return {
+			'lstm_layers': n_layers,
+			'fc_layers': 2,
+			'n_hidden': n_hidden,
+			'dropout1': D1,
+			'dropout2': D2,
+		}
+		
 	def __init__(self, n_input, n_output):
 		super(RNN, self).__init__()
 		with self.init_scope():
