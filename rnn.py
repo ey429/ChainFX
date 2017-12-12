@@ -7,7 +7,6 @@ import chainer.functions as F
 import chainer.links as L
 from chainer.training import extensions
 from chainer.datasets import tuple_dataset
-import time
 
 n_layers = 1
 n_hidden = 200

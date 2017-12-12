@@ -22,7 +22,8 @@ class Learner:
 		print self.name
 
 		train, test = data.make()
-		chain = RNN(1, 2)
+#		chain = RNN(1, 2)
+		chain = CNN()
 		model = L.Classifier(chain)
 		
 		if epoch_done > 0:
