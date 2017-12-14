@@ -1,0 +1,61 @@
+run_info:
+  learning_rate: 0.001
+  period: 50
+  batch: 100
+  epoch: 10
+  epoch_done: 10
+  weight_decay: 0.0001
+  gradient_clip: 3.0
+
+data_info:
+  test: 10000
+  train: 100000
+  range: 0.5
+  after: 1
+  interval: 10
+
+chain_info:
+  dropout2: 0.5
+  dropout1: 0.2
+  n_hidden: 300
+
+result:
+epoch: 1
+  validation loss: 0.339637889495
+  validation accuracy: 0.8597
+
+epoch: 2
+  validation loss: 0.257059127015
+  validation accuracy: 0.9383
+
+epoch: 3
+  validation loss: 0.208559439057
+  validation accuracy: 0.9062
+
+epoch: 4
+  validation loss: 0.537595930001
+  validation accuracy: 0.8643
+
+epoch: 5
+  validation loss: 0.261132255629
+  validation accuracy: 0.8637
+
+epoch: 6
+  validation loss: 0.305081196624
+  validation accuracy: 0.9203
+
+epoch: 7
+  validation loss: 0.12467774677
+  validation accuracy: 0.96
+
+epoch: 8
+  validation loss: 0.265421993637
+  validation accuracy: 0.8942
+
+epoch: 9
+  validation loss: 0.305385778993
+  validation accuracy: 0.8654
+
+epoch: 10
+  validation loss: 0.131831430864
+  validation accuracy: 0.965
